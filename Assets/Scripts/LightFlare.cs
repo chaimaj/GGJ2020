@@ -6,16 +6,24 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class LightFlare : MonoBehaviour
 {
-    Light2D light;
+
+    
+    public float flareInterval = 5f;
+    public float smallInnerRadius = 1.31f;
+    public float smallOuterRadius = 3.47f;
+    public float largeInnerRadius = 2f;
+    public float largeOuterRadius = 5f;
+
+    Light2D light_;
+    float lastFlareTime;
     int numFlares;
     bool flareOn;
-    float lastFlareTime;
-    float flareInterval = 5f;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        light = this.GetComponent<Light2D>();
+        light_ = GetComponent<Light2D>();
         numFlares = 3;
         flareOn = false;
     }
@@ -27,16 +35,16 @@ public class LightFlare : MonoBehaviour
             if (Time.time > lastFlareTime + flareInterval)
             {
                 flareOn = false;
-                light.pointLightInnerRadius = 1.31f;
-                light.pointLightOuterRadius = 3.47f;
+                light_.pointLightInnerRadius = smallInnerRadius;
+                light_.pointLightOuterRadius = smallOuterRadius;
             }
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             Debug.Log("Space key was released.");
             if (numFlares > 0) { 
-                light.pointLightInnerRadius = 2;
-                light.pointLightOuterRadius = 5;
+                light_.pointLightInnerRadius = largeInnerRadius;
+                light_.pointLightOuterRadius = largeOuterRadius;
                 flareOn = true;
                 lastFlareTime = Time.time;
                 numFlares--;
