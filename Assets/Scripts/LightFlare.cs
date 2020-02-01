@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.UI;
 
 
 public class LightFlare : MonoBehaviour
@@ -13,6 +14,8 @@ public class LightFlare : MonoBehaviour
     public float smallOuterRadius = 3.47f;
     public float largeInnerRadius = 2f;
     public float largeOuterRadius = 5f;
+
+    public GameObject[] matches;
 
     Light2D light_;
     float lastFlareTime;
@@ -48,6 +51,7 @@ public class LightFlare : MonoBehaviour
                 flareOn = true;
                 lastFlareTime = Time.time;
                 numFlares--;
+                matches[numFlares].SetActive(false);
             }
         }
 
