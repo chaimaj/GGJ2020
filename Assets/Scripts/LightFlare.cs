@@ -18,6 +18,7 @@ public class LightFlare : MonoBehaviour
         light = this.GetComponent<Light2D>();
         numFlares = 3;
         flareOn = false;
+    }
 
     // Update is called once per frame
     void Update()
