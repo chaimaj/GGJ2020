@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 100639710}
   - component: {fileID: 100639709}
   - component: {fileID: 100639708}
+  - component: {fileID: 100639711}
   m_Layer: 5
   m_Name: start
   m_TagString: Untagged
@@ -279,7 +280,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 100639709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 100639711}
+        m_MethodName: TaskOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &100639709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +328,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100639706}
   m_CullTransparentMesh: 0
+--- !u!114 &100639711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100639706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321fd16ec1c8f6d43b24f7d15949489b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: PearGame
 --- !u!1 &242990615
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +353,7 @@ GameObject:
   - component: {fileID: 242990619}
   - component: {fileID: 242990618}
   - component: {fileID: 242990617}
+  - component: {fileID: 242990620}
   m_Layer: 5
   m_Name: credits
   m_TagString: Untagged
@@ -397,7 +423,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 242990618}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 242990620}
+        m_MethodName: TaskOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &242990618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,6 +471,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242990615}
   m_CullTransparentMesh: 0
+--- !u!114 &242990620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242990615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321fd16ec1c8f6d43b24f7d15949489b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Credits
 --- !u!1 &639919258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1139,7 @@ GameObject:
   - component: {fileID: 1539441354}
   - component: {fileID: 1539441353}
   - component: {fileID: 1539441352}
+  - component: {fileID: 1539441355}
   m_Layer: 5
   m_Name: inst
   m_TagString: Untagged
@@ -1158,7 +1209,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1539441353}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1539441355}
+        m_MethodName: TaskOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1539441353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1195,6 +1257,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539441350}
   m_CullTransparentMesh: 0
+--- !u!114 &1539441355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539441350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321fd16ec1c8f6d43b24f7d15949489b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Instructions
 --- !u!1 &1712823812
 GameObject:
   m_ObjectHideFlags: 0
