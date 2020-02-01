@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -10,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
    
     Vector2 movement;
     float idleTimer = 0;
+
     // Update is called once per frame
     void Update()
     {
@@ -20,9 +21,16 @@ public class CharacterMovement : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
         animator.SetFloat("Idle", idleTimer);
-
-
-
+        if (Math.Abs(movement.x) == 1)
+        {
+            animator.SetFloat("IdleX", movement.x);
+            animator.SetFloat("IdleY", 0);
+        }
+        if (Math.Abs(movement.y) == 1)
+        {
+            animator.SetFloat("IdleY", movement.y);
+            animator.SetFloat("IdleX", 0);
+        }
     }
     void FixedUpdate()
     {
