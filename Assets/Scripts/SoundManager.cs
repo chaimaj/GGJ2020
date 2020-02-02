@@ -215,13 +215,10 @@ public class SoundManager : MonoBehaviour {
 
     IEnumerator FadeIn(string name, float speed, float maxVolume)
     {
-        //keepFadingIn = true;
-        //keepFadingOut = false;
-
         Sound s = Array.Find(themeSounds, sound => sound.name == name);
         s.source.volume = 0;
 
-        while (s.source.volume < maxVolume /*&& keepFadingIn*/)
+        while (s.source.volume < maxVolume)
         {
             s.source.volume += speed;
             yield return new WaitForSeconds(0.1f);
@@ -230,17 +227,13 @@ public class SoundManager : MonoBehaviour {
 
     IEnumerator FadeOut(string name, float speed)
     {
-        //keepFadingIn = false;
-        //keepFadingOut = true;
-
         Sound s = Array.Find(themeSounds, sound => sound.name == name);
 
-        while (s.source.volume >= 0 /*&& keepFadingOut*/)
+        while (s.source.volume >= 0)
         {
             s.source.volume -= speed;
             yield return new WaitForSeconds(0.1f);
         }
-        //s.source.Stop();
     }
 
     IEnumerator PlayRandomAtIntervals(Sound[] sounds)
