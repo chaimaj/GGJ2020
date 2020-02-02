@@ -44,7 +44,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scatterInterval: 10
-  themeSounds: []
+  themeSounds:
+  - name: GamePlay
+    clip: {fileID: 8300000, guid: 50b6a437d76a0d24abdbd5b01b07bed8, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MenuMusic
+    clip: {fileID: 8300000, guid: e0ffac8fb03dcc54c903e7beb2b62f62, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   loopingSounds:
   - name: Cricket_Loop
     clip: {fileID: 8300000, guid: 36fc59cb8c090f843b6cb7bc0c226e7f, type: 3}

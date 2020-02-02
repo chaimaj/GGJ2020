@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using System.Linq;
+
 using Random = UnityEngine.Random;
+
 
 public class SoundManager : MonoBehaviour {
 
@@ -23,6 +24,7 @@ public class SoundManager : MonoBehaviour {
 
     string prevTheme;
     bool scatters = true;
+    string currentScene;
 
     void Awake()
     {
@@ -81,10 +83,8 @@ public class SoundManager : MonoBehaviour {
     }
 
     private void Start()
-    {
-        PlayLoopingThemes(loopingSounds);        
-       
-        //PlayTheme("TitleTheme");
+    {        
+        PlayTheme("MenuMusic");
         //StartCoroutine(FadeIn("TitleTheme", 0.01f, 0.8f));
     }
 
