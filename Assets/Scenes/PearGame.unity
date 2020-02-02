@@ -459,7 +459,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -483,7 +483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1289,7 +1289,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381445426}
   m_CullTransparentMesh: 0
---- !u!43 &1654714993
+--- !u!43 &1389084078
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2738,6 +2738,14 @@ PrefabInstance:
       propertyPath: m_ShadowVolumeIntensity
       value: 0.136
       objectReference: {fileID: 0}
+    - target: {fileID: 148288533, guid: 4107fd7f8efdfde48a8de2e9fd76ee38, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 148288533, guid: 4107fd7f8efdfde48a8de2e9fd76ee38, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 486807250, guid: 4107fd7f8efdfde48a8de2e9fd76ee38, type: 3}
       propertyPath: matches.Array.data[0]
       value: 
@@ -2752,11 +2760,15 @@ PrefabInstance:
       objectReference: {fileID: 1322713365}
     - target: {fileID: 486807250, guid: 4107fd7f8efdfde48a8de2e9fd76ee38, type: 3}
       propertyPath: largeOuterRadius
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 486807250, guid: 4107fd7f8efdfde48a8de2e9fd76ee38, type: 3}
       propertyPath: flareInterval
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 486807250, guid: 4107fd7f8efdfde48a8de2e9fd76ee38, type: 3}
+      propertyPath: largeInnerRadius
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1020887761, guid: 4107fd7f8efdfde48a8de2e9fd76ee38, type: 3}
       propertyPath: UICanvas
@@ -2820,6 +2832,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322946485151299744, guid: 4107fd7f8efdfde48a8de2e9fd76ee38,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322946485151299744, guid: 4107fd7f8efdfde48a8de2e9fd76ee38,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322946485151299744, guid: 4107fd7f8efdfde48a8de2e9fd76ee38,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4322946485151299750, guid: 4107fd7f8efdfde48a8de2e9fd76ee38,
         type: 3}

@@ -461,6 +461,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TaskOnClick
       objectReference: {fileID: 0}
+    - target: {fileID: 2079953992582624477, guid: 7a115f7753305b044ab8fe835d41ab26,
+        type: 3}
+      propertyPath: scene
+      value: PearGame
+      objectReference: {fileID: 0}
     - target: {fileID: 2079953992582624478, guid: 7a115f7753305b044ab8fe835d41ab26,
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
