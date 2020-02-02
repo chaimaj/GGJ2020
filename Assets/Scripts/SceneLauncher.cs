@@ -10,6 +10,6 @@ public class SceneLauncher : MonoBehaviour
    public void TaskOnClick()
     {
         Debug.Log(scene);
-        SceneManager.LoadScene(scene);
+        AutoFadeScript.LoadLevel(scene, 1, 1, Color.black);
     }
 }
