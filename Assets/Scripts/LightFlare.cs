@@ -6,13 +6,14 @@ public class LightFlare : MonoBehaviour
 {
 
     
-    public float flareInterval = 5f;
-    public float smallInnerRadius = 1.31f;
-    public float smallOuterRadius = 3.47f;
+    public float flareInterval = 3f;
+    
     public float largeInnerRadius = 2f;
-    public float largeOuterRadius = 5f;
+    public float largeOuterRadius = 4f;
 
     public GameObject[] matches;
+    float smallInnerRadius;
+    float smallOuterRadius;
 
     Light2D light_;
     float lastFlareTime;
@@ -24,6 +25,8 @@ public class LightFlare : MonoBehaviour
     void Start()
     {
         light_ = GetComponent<Light2D>();
+        smallInnerRadius = light_.pointLightInnerRadius;
+        smallOuterRadius = light_.pointLightOuterRadius;
         numFlares = 3;
         flareOn = false;
     }
