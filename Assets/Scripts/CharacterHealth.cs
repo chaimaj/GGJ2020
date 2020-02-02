@@ -12,4 +12,13 @@ public class CharacterHealth : MonoBehaviour
         health_pears = GameObject.FindGameObjectsWithTag("health");
     }
 
+    private void Update()
+    {
+        if (characterHealth <= 0)
+        {
+
+        }
+
+    }
+
 }

@@ -20,10 +20,17 @@ public class EnemyScript : MonoBehaviour
         int index = CharacterHealth.characterHealth / 2;
         if (CharacterHealth.characterHealth % 2 == 0)
         {
-            CharacterHealth.health_pears[index].SetActive(false);
+            for (int i = CharacterHealth.health_pears.Length - 1; i >= index; i--)
+            {
+                CharacterHealth.health_pears[i].SetActive(false);
+            }            
         }
         else
         {
+            for (int i = CharacterHealth.health_pears.Length - 1; i > index; i--)
+            {
+                CharacterHealth.health_pears[i].SetActive(false);
+            }
             CharacterHealth.health_pears[index].GetComponent<Image>().sprite = half_pear;
         }
     }
