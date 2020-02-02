@@ -13,6 +13,13 @@ public class CharacterMovement : MonoBehaviour
     Vector2 movement;
     float idleTimer = 0;
 
+    private SoundManager sm_instance = null;
+
+    private void Start()
+    {
+        sm_instance = SoundManager.instance;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -39,11 +46,13 @@ public class CharacterMovement : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
         {
-                idleTimer = 0;
+            sm_instance.PlayOnce("FootSteps", 2.5f, sm_instance.soundEffects);
+            idleTimer = 0;
         }
         else
         {
-                idleTimer += Time.fixedDeltaTime;
+            sm_instance.StopSound("FootSteps", sm_instance.soundEffects);
+            idleTimer += Time.fixedDeltaTime;
         }
        
     }

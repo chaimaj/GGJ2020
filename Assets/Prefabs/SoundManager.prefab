@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4147996409117227260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4147996409117227263}
+  - component: {fileID: 4147996409117227262}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4147996409117227263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147996409117227260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.625797, y: 27.249157, z: -50.703945}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4147996409117227262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147996409117227260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9415b9ab3dd84804d8deb9c16578e427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scatterInterval: 10
+  themeSounds: []
+  loopingSounds:
+  - name: Cricket_Loop
+    clip: {fileID: 8300000, guid: 36fc59cb8c090f843b6cb7bc0c226e7f, type: 3}
+    volume: 0.036
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Wind_Loop
+    clip: {fileID: 8300000, guid: 32c2be2b9ea101347b95ab2983cc28e1, type: 3}
+    volume: 0.018
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  soundEffects:
+  - name: FootSteps
+    clip: {fileID: 8300000, guid: 0e36caef277c98e4f9208e5d697354b9, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  randomScatters:
+  - name: BirdScatter1
+    clip: {fileID: 8300000, guid: d40c0f9be7898db49a62bf10d37b37e5, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BirdScatter2
+    clip: {fileID: 8300000, guid: d74911b1f43978c40a2217936498c894, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BirdScatter3
+    clip: {fileID: 8300000, guid: cd79b4b248c578e41b59d1cffaf8e326, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BirdScatter4
+    clip: {fileID: 8300000, guid: cd240ab43f8f6c3428b39c9b7afb1e91, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BirdScatter5
+    clip: {fileID: 8300000, guid: e3bd0781da4318242aa346519e177e8d, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BirdScatter6
+    clip: {fileID: 8300000, guid: 14defe13f87657c45b0cbd828b74c804, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BirdScatter7
+    clip: {fileID: 8300000, guid: f1276e3b5eef41c4a942dad16fbd67bb, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BirdScatter8
+    clip: {fileID: 8300000, guid: 1d80c5b8fbb437349aedda12bdd51d4d, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BirdScatter9
+    clip: {fileID: 8300000, guid: e91ec15b507bca046adee0c74106ff38, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BirdScatter10
+    clip: {fileID: 8300000, guid: c7717b10e42dcfe4e91043603b194fa3, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WolfScatter1
+    clip: {fileID: 8300000, guid: 66bab3ad1456d8f46987bed0250d0465, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WolfScatter2
+    clip: {fileID: 8300000, guid: aed1ef547aa67cd438d87874fac38adb, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WolfScatter3
+    clip: {fileID: 8300000, guid: c2056feb720ebc2488370171fa9811ab, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  collisions:
+  - name: bushCollideHard1
+    clip: {fileID: 8300000, guid: 111f0eb304fb5cb4f8c0d72489bacdc2, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bushCollideHard2
+    clip: {fileID: 8300000, guid: 4c54a3b0b7b2bc1498bf1490844e2e2b, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bushCollideHard3
+    clip: {fileID: 8300000, guid: a292d64fe9de5dd42a5677e482ad0f0f, type: 3}
+    volume: 0.3
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: bushCollideHard4
+    clip: {fileID: 8300000, guid: 5b6c6989552fe5244a2f43f963dd8e1a, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bushCollideHard5
+    clip: {fileID: 8300000, guid: c395ee9080ed5bc448369c4796c674b6, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bushCollideSoft1
+    clip: {fileID: 8300000, guid: 10a4f90283c2d924bacbc956ccf1457f, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bushCollideSoft2
+    clip: {fileID: 8300000, guid: 63ae9a01915b9c64bbe9a0b50c23a480, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bushCollideSoft3
+    clip: {fileID: 8300000, guid: 863023a037fa5db48ae60f0fb55f6255, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bushCollideSoft4
+    clip: {fileID: 8300000, guid: ac6c0cb895b32054e802ada19ddccfc0, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bushCollideSoft5
+    clip: {fileID: 8300000, guid: 3e49e712ad7c86d4c9ce7242d297643b, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

@@ -2,22 +2,27 @@
 using System.Collections;
 using System;
 using System.Linq;
+using Random = UnityEngine.Random;
 
 public class SoundManager : MonoBehaviour {
 
 
+    public float scatterInterval = 10;
+
     public Sound[] themeSounds;
-    // Use this for initialization
+
+    public Sound[] loopingSounds;
 
     public Sound[] soundEffects;
 
-    public Sound[] birds;
+    public Sound[] randomScatters;
+
+    public Sound[] collisions;
 
     public static SoundManager instance = null;
-    public static bool keepFadingIn = true;
-    public static bool keepFadingOut = true;
 
     string prevTheme;
+    bool scatters = true;
 
     void Awake()
     {
@@ -36,6 +41,15 @@ public class SoundManager : MonoBehaviour {
             s.source.loop = s.loop;
         }
 
+        foreach (Sound s in loopingSounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+        }
+
         foreach (Sound s in soundEffects)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -45,7 +59,16 @@ public class SoundManager : MonoBehaviour {
             s.source.loop = s.loop;
         }
 
-        foreach (Sound s in birds)
+        foreach (Sound s in randomScatters)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+        }
+
+        foreach (Sound s in collisions)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -59,10 +82,18 @@ public class SoundManager : MonoBehaviour {
 
     private void Start()
     {
-
+        PlayLoopingThemes(loopingSounds);        
        
-        PlayTheme("TitleTheme");
-        StartCoroutine(FadeIn("TitleTheme", 0.01f, 0.8f));
+        //PlayTheme("TitleTheme");
+        //StartCoroutine(FadeIn("TitleTheme", 0.01f, 0.8f));
+    }
+
+    private void Update()
+    {
+        if (scatters)
+        {
+            StartCoroutine(PlayRandomAtIntervals(randomScatters));
+        }
     }
 
 
@@ -77,11 +108,18 @@ public class SoundManager : MonoBehaviour {
     }
 
     
-
+    public void PlayLoopingThemes(Sound[] loops)
+    {
+        foreach (Sound sound in loops)
+        {
+            PlayOnce(sound.name, 1f, loops);
+        }
+    }
     
     public void PlayRandomTheme(Sound[] sounds)
     {
-
+        int index = Random.Range(0, sounds.Length);
+        PlaySound(sounds[index].name, sounds);
     }
 
 
@@ -105,9 +143,9 @@ public class SoundManager : MonoBehaviour {
         }       
     }
 
-    public void PlaySound(string name)
+    public void PlaySound(string name, Sound[] sounds)
     {
-        Sound s = Array.Find(soundEffects, sound => sound.name == name);
+        Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
             Debug.LogWarning("No sound named " + name + " !");
@@ -116,9 +154,9 @@ public class SoundManager : MonoBehaviour {
         s.source.Play();
     }
 
-    public void PlayOnce(string name, float pitch)
+    public void PlayOnce(string name, float pitch, Sound[] sounds)
     {
-        Sound s = Array.Find(soundEffects, sound => sound.name == name);
+        Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
             Debug.LogWarning("No sound named " + name + " !");
@@ -129,9 +167,9 @@ public class SoundManager : MonoBehaviour {
             s.source.Play();
     }
 
-    public void StopSound(string name)
+    public void StopSound(string name, Sound[] sounds)
     {
-        Sound s = Array.Find(soundEffects, sound => sound.name == name);
+        Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
             Debug.LogWarning("No sound named " + name + " !");
@@ -203,5 +241,14 @@ public class SoundManager : MonoBehaviour {
             yield return new WaitForSeconds(0.1f);
         }
         //s.source.Stop();
+    }
+
+    IEnumerator PlayRandomAtIntervals(Sound[] sounds)
+    {
+        scatters = false;
+        yield return new WaitForSeconds(scatterInterval);
+        scatterInterval = Random.Range(scatterInterval - 2, scatterInterval + 2);
+        PlayRandomTheme(sounds);
+        scatters = true;
     }
 }
