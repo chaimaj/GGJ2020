@@ -18,6 +18,8 @@ public class CharacterMovement : MonoBehaviour
     private void Start()
     {
         sm_instance = SoundManager.instance;
+        sm_instance.PlayLoopingThemes(sm_instance.loopingSounds);
+        sm_instance.PlayTheme("GamePlay");
     }
 
     // Update is called once per frame
