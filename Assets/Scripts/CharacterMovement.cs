@@ -4,6 +4,8 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
 
+    public static int characterHealth = 6;
+
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Animator animator;
