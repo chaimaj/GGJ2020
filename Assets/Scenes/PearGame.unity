@@ -3912,12 +3912,12 @@ GameObject:
   - component: {fileID: 229532902}
   - component: {fileID: 229532901}
   m_Layer: 0
-  m_Name: half-pear (1)
+  m_Name: half-pear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &229532901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7897,12 +7897,12 @@ GameObject:
   - component: {fileID: 874893550}
   - component: {fileID: 874893551}
   m_Layer: 0
-  m_Name: half-pear
+  m_Name: half-pear (dup)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &874893548
 SpriteRenderer:
   m_ObjectHideFlags: 0
